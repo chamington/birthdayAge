@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script src="jquery.js"></script>
+		<script>
+var a = false
+$( document ).ready(function() {
+	var timerId = setInterval(function(){
+		$("#Age").text((document.getElementById("Age").innerHTML)*1+1);
+		$("#stop").click( function(){
+			clearInterval(timerId);
+			$("#sumbit").show();
+		});
+	},1000);
+
+});
+		</script>
+	</head>
+	<body>
+		<div>
+			<p style="display: inline">Are you </p>
+			<p id="Age" style="display: inline">1</p>
+			<p style="display: inline; margin-left:-4px;">?</p>
+		</div>
+		<button id="stop">Stop!</button>
+		<button id="sumbit" hidden>Submit</button>
+	</body>
+</html>
